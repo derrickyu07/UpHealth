@@ -1,0 +1,202 @@
+[
+  {
+    "vaccine_name": "HepB",
+    "disease_prevented": "Hepatitis B",
+    "dose_number": 1,
+    "recommended_age_start": 0,
+    "recommended_age_end": 2,
+    "booster_interval": null,
+    "validity_months": 24,
+    "is_mandatory": true
+  },
+  {
+    "vaccine_name": "HepB",
+    "disease_prevented": "Hepatitis B",
+    "dose_number": 2,
+    "recommended_age_start": 1,
+    "recommended_age_end": 4,
+    "booster_interval": null,
+    "validity_months": 24,
+    "is_mandatory": true
+  },
+  {
+    "vaccine_name": "HepB",
+    "disease_prevented": "Hepatitis B",
+    "dose_number": 3,
+    "recommended_age_start": 6,
+    "recommended_age_end": 18,
+    "booster_interval": null,
+    "validity_months": 240,
+    "is_mandatory": true
+  },
+  {
+    "vaccine_name": "DTaP",
+    "disease_prevented": "Diphtheria, Tetanus, Pertussis",
+    "dose_number": 1,
+    "recommended_age_start": 2,
+    "recommended_age_end": 3,
+    "booster_interval": null,
+    "validity_months": 60,
+    "is_mandatory": true
+  },
+  {
+    "vaccine_name": "DTaP",
+    "disease_prevented": "Diphtheria, Tetanus, Pertussis",
+    "dose_number": 2,
+    "recommended_age_start": 4,
+    "recommended_age_end": 5,
+    "booster_interval": null,
+    "validity_months": 60,
+    "is_mandatory": true
+  },
+  {
+    "vaccine_name": "DTaP",
+    "disease_prevented": "Diphtheria, Tetanus, Pertussis",
+    "dose_number": 3,
+    "recommended_age_start": 6,
+    "recommended_age_end": 7,
+    "booster_interval": null,
+    "validity_months": 60,
+    "is_mandatory": true
+  },
+  {
+    "vaccine_name": "DTaP",
+    "disease_prevented": "Diphtheria, Tetanus, Pertussis",
+    "dose_number": 4,
+    "recommended_age_start": 15,
+    "recommended_age_end": 18,
+    "booster_interval": null,
+    "validity_months": 120,
+    "is_mandatory": true
+  },
+  {
+    "vaccine_name": "Tdap",
+    "disease_prevented": "Tetanus, Diphtheria, Pertussis",
+    "dose_number": 1,
+    "recommended_age_start": 132,
+    "recommended_age_end": 132,
+    "booster_interval": 120,
+    "validity_months": 120,
+    "is_mandatory": true
+  },
+  {
+    "vaccine_name": "MMR",
+    "disease_prevented": "Measles, Mumps, Rubella",
+    "dose_number": 1,
+    "recommended_age_start": 12,
+    "recommended_age_end": 15,
+    "booster_interval": null,
+    "validity_months": 120,
+    "is_mandatory": true
+  },
+  {
+    "vaccine_name": "MMR",
+    "disease_prevented": "Measles, Mumps, Rubella",
+    "dose_number": 2,
+    "recommended_age_start": 48,
+    "recommended_age_end": 72,
+    "booster_interval": null,
+    "validity_months": 120,
+    "is_mandatory": true
+  },
+  {
+    "vaccine_name": "Varicella",
+    "disease_prevented": "Chickenpox",
+    "dose_number": 1,
+    "recommended_age_start": 12,
+    "recommended_age_end": 15,
+    "booster_interval": null,
+    "validity_months": 120,
+    "is_mandatory": true
+  },
+  {
+    "vaccine_name": "Varicella",
+    "disease_prevented": "Chickenpox",
+    "dose_number": 2,
+    "recommended_age_start": 48,
+    "recommended_age_end": 72,
+    "booster_interval": null,
+    "validity_months": 120,
+    "is_mandatory": true
+  },
+  {
+    "vaccine_name": "HPV",
+    "disease_prevented": "Human Papillomavirus",
+    "dose_number": 1,
+    "recommended_age_start": 132,
+    "recommended_age_end": 168,
+    "booster_interval": 6,
+    "validity_months": 120,
+    "is_mandatory": false
+  },
+  {
+    "vaccine_name": "HPV",
+    "disease_prevented": "Human Papillomavirus",
+    "dose_number": 2,
+    "recommended_age_start": 138,
+    "recommended_age_end": 174,
+    "booster_interval": null,
+    "validity_months": 120,
+    "is_mandatory": false
+  },
+  {
+    "vaccine_name": "Influenza",
+    "disease_prevented": "Flu",
+    "dose_number": 1,
+    "recommended_age_start": 6,
+    "recommended_age_end": 720,
+    "booster_interval": 12,
+    "validity_months": 12,
+    "is_mandatory": false
+  },
+  {
+    "vaccine_name": "Pneumococcal",
+    "disease_prevented": "Pneumococcal disease",
+    "dose_number": 1,
+    "recommended_age_start": 2,
+    "recommended_age_end": 4,
+    "booster_interval": null,
+    "validity_months": 120,
+    "is_mandatory": true
+  },
+  {
+    "vaccine_name": "Pneumococcal",
+    "disease_prevented": "Pneumococcal disease",
+    "dose_number": 2,
+    "recommended_age_start": 4,
+    "recommended_age_end": 6,
+    "booster_interval": null,
+    "validity_months": 120,
+    "is_mandatory": true
+  },
+  {
+    "vaccine_name": "Pneumococcal",
+    "disease_prevented": "Pneumococcal disease",
+    "dose_number": 3,
+    "recommended_age_start": 12,
+    "recommended_age_end": 15,
+    "booster_interval": null,
+    "validity_months": 120,
+    "is_mandatory": true
+  },
+  {
+    "vaccine_name": "COVID-19",
+    "disease_prevented": "COVID-19",
+    "dose_number": 1,
+    "recommended_age_start": 216,
+    "recommended_age_end": 840,
+    "booster_interval": 6,
+    "validity_months": 12,
+    "is_mandatory": false
+  },
+  {
+    "vaccine_name": "COVID-19",
+    "disease_prevented": "COVID-19",
+    "dose_number": 2,
+    "recommended_age_start": 222,
+    "recommended_age_end": 846,
+    "booster_interval": null,
+    "validity_months": 12,
+    "is_mandatory": false
+  }
+]
