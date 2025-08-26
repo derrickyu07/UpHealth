@@ -1,0 +1,43 @@
+name: Deploy Frontend to Azure Static Web Apps
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'UpHealth.Web/client-app/**'
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+    branches:
+      - main
+    paths:
+      - 'UpHealth.Web/client-app/**'
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    name: Build and Deploy Job
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: UpHealth.Web/client
+
+      - name: Build
+        run: npm run build
+        working-directory: UpHealth.Web/client
+
+      - name: Deploy to Azure Static Web Apps
+        uses: Azure/static-web-apps-deploy@v1
+        with:
+          azure_static_web_apps_api_token: ${{ secrets.SWA_DEPLOYMENT_TOKEN }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          action: 'upload'
+          app_location: 'UpHealth.Web/client'
+          output_location: 'dist' # change to "build" if CRA
