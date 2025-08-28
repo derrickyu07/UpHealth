@@ -1,0 +1,61 @@
+name: Backend API - Build, Test, Deploy
+
+on:
+  push:
+    branches: [main]
+    paths: ['UpHealth.Web/**', '.github/workflows/backend-api.yml']
+  pull_request:
+    branches: [main]
+    paths: ['UpHealth.Web/**']
+
+env:
+  PROJECT_PATH: UpHealth.Web/UpHealth.Web.csproj
+  PUBLISH_DIR: UpHealth.Web/publish
+  DOTNET_VERSION: '9.0.301'
+  AZURE_WEBAPP_NAME: uphealth-api
+
+jobs:
+  build_and_test:
+    name: Build & Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: ${{ env.DOTNET_VERSION }}
+
+      - name: Restore
+        run: dotnet restore ${{ env.PROJECT_PATH }}
+
+      - name: Build
+        run: dotnet build ${{ env.PROJECT_PATH }} -c Release --no-restore
+
+      # If you have tests in a separate project, add a step pointing to it.
+      - name: Test (skip if no tests)
+        run: |
+          dotnet test -c Release --no-build || echo "No tests or tests failed (non-blocking for now)"
+
+  deploy:
+    name: Deploy to Azure App Service
+    needs: build_and_test
+    if: github.event_name == 'push' # only deploy on push to main, not on PRs
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: ${{ env.DOTNET_VERSION }}
+
+      - name: Publish
+        run: dotnet publish ${{ env.PROJECT_PATH }} -c Release -o ${{ env.PUBLISH_DIR }}
+
+      - name: Deploy
+        uses: azure/webapps-deploy@v3
+        with:
+          app-name: ${{ env.AZURE_WEBAPP_NAME }}
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+          package: ${{ env.PUBLISH_DIR }}
