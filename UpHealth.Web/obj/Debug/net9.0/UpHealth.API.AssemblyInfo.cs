@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UpHealth.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+97cc52756882cfb2372ccbe85ec8fe8fb0bf8e5f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+44c17c5d762d6ddafef6f7b5ba35588426163503")]
 [assembly: System.Reflection.AssemblyProductAttribute("UpHealth.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UpHealth.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
