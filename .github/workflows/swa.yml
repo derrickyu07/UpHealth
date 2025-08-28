@@ -34,4 +34,5 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: 'upload'
           app_location: 'client-app'
-          output_location: 'dist' # or "build" if CRA
+          output_location: 'dist'
+          skip_app_build: true
